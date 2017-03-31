@@ -40,4 +40,12 @@ public class ClientTest {
     assertEquals("coughing", Client.find(client.getId()).getDescription());
     assertEquals(2, Client.find(client.getId()).getId_stylist());
   }
+
+  @Test
+  public void delete_removesRecord() {
+    Client client = new Client("Tyler", "Strep Throat", 1);
+    client.save();
+    client.delete();
+    assertEquals(null, Client.find(client.getId()));
+  }
 }
