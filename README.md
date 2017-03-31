@@ -23,10 +23,12 @@ _This web application uses, Java, IntelliJ, JUnit, PostgreSQL, RESTful routes, a
 
 | Behavior                   | Input Example     | Output Example    |
 | -------------------------- | -----------------:| -----------------:|
-| User adds a strain (Boss OG) | Save method is called | Strain instance is saved in the database |
-| User writes a review | Save method is called | Review is saved in database |
-| User clicks on a classification (Sativa, Hybrid, Indica) | All method is called | List of strains belonging to that classification is returned |
-| User clicks individual strain | Find method is called | Specific strain is returned |
+| Routing takes user from page to page | 'Create Team' button is clicked | User redirected to the team-form page, url changes accordingly |
+| When the team form is submitted, a team instance is created | Team form submitted | New team created with matching fields |
+| When the member form is submitted, a member instance is created | Member form submitted | New member created with matching fields |
+| Member instances are added to correct team | Member is created from the member form | New member belongs to a specific team |
+| Teams are able to be listed out | Viewing all teams | Each team shows with the corresponding team name |
+| Members are able to be listed out under specific team | Viewing specific team | All members are shown belonging to that team |
 
 
 
@@ -39,6 +41,6 @@ _This web application uses, Java, IntelliJ, JUnit, PostgreSQL, RESTful routes, a
 
 ### License
 
-CCopyright (c) 2017 **_Ryan Jones_**
+Copyright (c) 2017 **_Ryan Jones_**
 
 This software is licensed under the MIT license.
