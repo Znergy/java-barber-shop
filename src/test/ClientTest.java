@@ -1,12 +1,8 @@
-import com.znergy.Client;
 import org.junit.Rule;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- * Created by ryanjones on 3/31/17.
- */
 public class ClientTest {
 
   @Rule

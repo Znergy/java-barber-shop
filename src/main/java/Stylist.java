@@ -1,11 +1,6 @@
-package com.znergy;
-
 import org.sql2o.Connection;
 import java.util.List;
 
-/**
- * Created by ryanjones on 3/31/17.
- */
 public class Stylist {
 
   private String name;

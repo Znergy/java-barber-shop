@@ -1,8 +1,3 @@
-package com.znergy;
-
-/**
- * Created by ryanjones on 3/31/17.
- */
 import org.sql2o.*;
 
 public class DB {

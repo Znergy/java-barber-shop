@@ -1,12 +1,7 @@
-package com.znergy;
-
-import org.sql2o.Connection;
+import org.sql2o.*;
 
 import java.util.List;
 
-/**
- * Created by ryanjones on 3/31/17.
- */
 public class Client {
   private int id;
   private String name;
