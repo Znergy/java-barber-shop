@@ -42,6 +42,7 @@ public class Client {
     }
   }
 
+
   public void save() {
     try (Connection con = DB.sql2o.open()) {
       String sql = "INSERT INTO clients (name, description, id_stylist) VALUES (:name, :description, :id_stylist);";
