@@ -23,12 +23,12 @@ _This web application uses, Java, IntelliJ, JUnit, PostgreSQL, RESTful routes, a
 
 | Behavior                   | Input Example     | Output Example    |
 | -------------------------- | -----------------:| -----------------:|
-| Routing takes user from page to page | 'Create Team' button is clicked | User redirected to the team-form page, url changes accordingly |
-| When the team form is submitted, a team instance is created | Team form submitted | New team created with matching fields |
-| When the member form is submitted, a member instance is created | Member form submitted | New member created with matching fields |
-| Member instances are added to correct team | Member is created from the member form | New member belongs to a specific team |
-| Teams are able to be listed out | Viewing all teams | Each team shows with the corresponding team name |
-| Members are able to be listed out under specific team | Viewing specific team | All members are shown belonging to that team |
+| Routing takes user from page to page | 'Add Stylist' button is clicked | User redirected to the stylist-form page, url changes accordingly |
+| When the stylist form is submitted, the stylist is added | Stylist form submitted | New stylist added with matching fields |
+| When the client form is submitted, the client is added | Client form submitted | New client created with matching fields |
+| Client instances are added to correct team | Client is created from the client form | New client belongs to a specific stylist |
+| Stylist are able to be listed out | Viewing all stylists | Each stylist shows with the corresponding stylist name |
+| Clients are able to be listed out under specific stylist | Viewing specific stylist | All clients are shown belonging to that stylist |
 
 
 
