@@ -21,7 +21,7 @@ public class StylistTest {
     stylist.save();
     Stylist stylist2 = new Stylist("ryan");
     stylist2.save();
-    assertTrue(stylist.getId() > 0);
+    assertTrue(Stylist.find(stylist.getId()) > 0);
   }
 
   @Test

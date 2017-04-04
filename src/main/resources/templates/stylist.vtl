@@ -9,7 +9,7 @@
         <h2>Clients</h2>
         #if ($stylist.getMembers().size() > 0)
           <ul>
-            #foreach ($client in $stylist.getMembers())
+            #foreach ($client in $stylist.getClients())
               <li><a href="/stylist/$stylist.getId()/client/$client.getId()">$client.getName()</a></li>
             #end
           </ul>

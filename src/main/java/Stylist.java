@@ -14,22 +14,34 @@ public class Stylist {
     return name;
   }
 
-  public void setName(String name) {
-    this.name = name;
-  }
-
   public int getId() {
     return id;
-  }
-
-  public void setId(int id) {
-    this.id = id;
   }
 
   public static List<Stylist> all() {
     try (Connection con = DB.sql2o.open()) {
       String sql = "SELECT id, name FROM stylists;";
       return con.createQuery(sql).executeAndFetch(Stylist.class);
+    }
+  }
+
+  @Override
+  public boolean equals(Object otherStylist) {
+   if (!(otherStylist instanceof Stylist)) {
+     return false;
+   } else {
+     Stylist stylist = (Stylist) otherStylist;
+     return this.getName().equals(stylist.getName()) &&
+            this.getId() == stylist.getId();
+   }
+  }
+
+  public List<Client> getClients() {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "SELECT * FROM clients where id_stylist=:id";
+      return con.createQuery(sql)
+        .addParameter("id", this.id)
+        .executeAndFetch(Client.class);
     }
   }
 
