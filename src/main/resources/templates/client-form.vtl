@@ -2,9 +2,14 @@
 <div class="well">
   <h2>Add a Client</h2>
   <form action="/client" method="post">
+    <input id="id_stylist" name="id_stylist" type="hidden" value="$stylist.getId()">
     <div class="input-group">
       <span class="input-group-addon">Client Name</span>
       <input class="form-control" name="name" placeholder="Terry Crews" type="text" />
+    </div>
+    <div class="input-group">
+      <span class="input-group-addon">Client Description</span>
+      <input class="form-control" name="description" placeholder="Bubonic Plague" type="text" />
     </div>
     <button class="btn btn-primary" type="submit">
       <span class="glyphicon glyphicon-transfer iconStyle"></span> Add Client

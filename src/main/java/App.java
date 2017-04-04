@@ -54,9 +54,10 @@ public class App {
       String name = request.queryParams("name");
       String description = request.queryParams("description");
       int id_stylist = Integer.parseInt(request.queryParams("id_stylist"));
-      Stylist stylist = new Stylist(name, description, id_stylist);
-      stylist.save();
-      model.put("stylist", stylist);
+      Client client = new Client(name, description, id_stylist);
+      client.save();
+      model.put("client", client);
+      model.put("stylist", Stylist.find(id_stylist));
       model.put("template", "templates/client.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());

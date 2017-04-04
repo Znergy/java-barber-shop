@@ -7,7 +7,7 @@
     <div class="col-md-6">
       <div class="stylist-clients">
         <h2>Clients</h2>
-        #if ($stylist.getMembers().size() > 0)
+        #if ($stylist.all().size() > 0)
           <ul>
             #foreach ($client in $stylist.getClients())
               <li><a href="/stylist/$stylist.getId()/client/$client.getId()">$client.getName()</a></li>
