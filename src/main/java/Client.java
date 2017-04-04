@@ -50,14 +50,13 @@ public class Client {
     }
   }
 
-  public void update(String name, String description, int id_stylist) {
+  public void update(String name, String description) {
     try (Connection con = DB.sql2o.open()) {
-      String sql = "UPDATE clients SET name = :name, description = :description, id_stylist = :id_stylist WHERE id " +
+      String sql = "UPDATE clients SET name = :name, description = :description WHERE id " +
               "= :id;";
       con.createQuery(sql)
               .addParameter("name", name)
               .addParameter("description", description)
-              .addParameter("id_stylist", id_stylist)
               .addParameter("id", this.id)
               .executeUpdate();
     }

@@ -8,8 +8,18 @@
     <ul>
       <li>Name: $client.getName()</li>
       <li>Description: $client.getDescription()</li>
-      <li>Stylist: $client.getId_stylist()</li>
+      <li>Stylist: $stylist.getName()</li>
     </ul>
+    <form action="/stylist/$stylist.getId()/client/$client.getId()/delete" method="post">
+      <button type="submit" class="btn btn-danger">Delete Client</button>
+    </form>
+    <form action="/stylist/$stylist.getId()/client/$client.getId()/update" method="post">
+      <label for="name">Name</label>
+      <input type="text" name="name">
+      <label for="description">Description</label>
+      <input type="text" name="description">
+      <button type="submit" class="btn btn-success">Update Client</button>
+    </form>
   </div>
 </div>
 <!-- Client Page -->
